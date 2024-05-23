@@ -1,8 +1,10 @@
 // file imports
 import express from "express";
 import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
 
 import authRoutes from "./routes/auth.routes.js";
+import messageRoutes from "./routes/message.routes.js";
 import connectToMongoDB from "./db/connectToMongoDB.js";
 
 // variables
@@ -12,8 +14,10 @@ const PORT = process.env.PORT || 3000; // PORT is either the one provided by the
 // middleware
 dotenv.config(); // load env variables
 app.use(express.json()); // parse json data ( from req.body)
+app.use(cookieParser()); // parse cookies
 
 app.use("/api/auth", authRoutes);
+app.use("/api/messages", messageRoutes);
 
 // listener for the server
 app.listen(PORT, () => {
