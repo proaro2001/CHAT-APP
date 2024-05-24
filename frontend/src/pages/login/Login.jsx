@@ -1,7 +1,58 @@
 // import React from "react";
 
 const Login = () => {
-  return <div>Login</div>;
+  return (
+    <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
+      <div className="w-full p-6 rounded-lg shadow-md bg-yellow-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-90">
+        <h1 className="text-3xl font-semibold text-center text-gray-200">
+          Login
+          <span className="text-purple-500 "> ChatApp</span>
+        </h1>
+
+        {/* Input Fields */}
+        <form>
+          {/* Username Input field*/}
+          <div>
+            <label className="label p-2">
+              <span className="text-base label-text ">Username</span>
+            </label>
+            <input
+              type="test"
+              placeholder="Enter username"
+              className="w-full input input-bordered h-10"
+            />
+          </div>
+
+          {/* Password Input field*/}
+          <div>
+            <label className="label p-2">
+              <span className="text-base label-text">Password</span>
+            </label>
+            <input
+              type="test"
+              placeholder="Enter password"
+              className="w-full input input-bordered h-10"
+            />
+          </div>
+
+          {/* SignUp Link */}
+          <a
+            href="#"
+            className="text-sm hover:underline hover:text-blue-600 mt-2 ml-2 inline-block"
+          >
+            {" "}
+            {"Don't have an account?"}
+          </a>
+
+          {/* Submit Button */}
+          <div className="flex flex-col items-center ">
+            {/* <button className="btn btn-block btn-sm mt-2">Login</button> */}
+            <button className="btn  btn-sm mt-2 w-6/12">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
 };
 
 export default Login;
