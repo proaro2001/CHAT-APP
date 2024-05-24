@@ -17,7 +17,7 @@ const Login = () => {
               <span className="text-base label-text ">Username</span>
             </label>
             <input
-              type="test"
+              type="text"
               placeholder="Enter username"
               className="w-full input input-bordered h-10"
             />
@@ -29,7 +29,7 @@ const Login = () => {
               <span className="text-base label-text">Password</span>
             </label>
             <input
-              type="test"
+              type="text"
               placeholder="Enter password"
               className="w-full input input-bordered h-10"
             />
@@ -38,9 +38,8 @@ const Login = () => {
           {/* SignUp Link */}
           <a
             href="#"
-            className="text-sm hover:underline hover:text-blue-600 mt-2 ml-2 inline-block"
+            className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block"
           >
-            {" "}
             {"Don't have an account?"}
           </a>
 
