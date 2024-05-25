@@ -7,6 +7,7 @@ export const signup = async (req, res) => {
   //   res.send("signup route");
   try {
     const { fullName, username, password, confirmPassword, gender } = req.body;
+    console.log(req.body);
 
     // VALIDATE PASSWORD
     if (password !== confirmPassword) {

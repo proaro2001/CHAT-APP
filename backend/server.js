@@ -12,7 +12,7 @@ import connectToMongoDB from "./db/connectToMongoDB.js";
 
 // variables
 const app = express(); // create express app
-const PORT = process.env.PORT || 3000; // PORT is either the one provided by the environment or 5000
+const PORT = process.env.PORT || 5100; // PORT is either the one provided by the environment or 5000
 
 // middleware
 dotenv.config(); // load env variables
