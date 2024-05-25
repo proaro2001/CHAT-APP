@@ -1,13 +1,11 @@
-/**
- * Provides authentication context for the application.
- *
- * @param {Object} props - The component props.
- * @param {ReactNode} props.children - The child components.
- * @returns {JSX.Element} The authentication context provider.
- */
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const AuthContext = createContext();
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const useAuthContext = () => {
+  return useContext(AuthContext);
+};
 
 export const AuthContextProvider = (prop) => {
   const [authUser, setAuthUser] = useState(
