@@ -114,7 +114,13 @@ const Signup = () => {
           </Link>
 
           <div className="flex flex-col items-center ">
-            <button className="btn  btn-sm mt-2 w-6/12">Sign Up</button>
+            <button className="btn  btn-sm mt-2 w-6/12" disabled={loading}>
+              {loading ? (
+                <span className="loading loading-spinner"></span>
+              ) : (
+                "Sign Up"
+              )}
+            </button>
           </div>
         </form>
       </div>

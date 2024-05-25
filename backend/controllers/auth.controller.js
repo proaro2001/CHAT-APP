@@ -7,17 +7,16 @@ export const signup = async (req, res) => {
   //   res.send("signup route");
   try {
     const { fullName, username, password, confirmPassword, gender } = req.body;
-    console.log(req.body);
 
     // VALIDATE PASSWORD
     if (password !== confirmPassword) {
-      return res.status(400).json({ message: "Password do not match" });
+      return res.status(400).json({ error: "Password do not match" });
     }
 
     // CHECK IF USER EXISTS
     const user = await User.findOne({ username });
     if (user) {
-      return res.status(400).json({ message: "Username already exists" });
+      return res.status(400).json({ error: "Username already exists" });
     }
 
     // HASH PASSWORD
@@ -47,7 +46,7 @@ export const signup = async (req, res) => {
         profilePic: newUser.profilePic,
       });
     } else {
-      res.status(400).json({ message: "User not created" });
+      res.status(400).json({ error: "User not created" });
     }
   } catch (error) {
     console.log("Error on signup controller:", error.message);
@@ -66,7 +65,7 @@ export const login = async (req, res) => {
     );
 
     if (!user || !isPasswordCorrect) {
-      return res.status(400).json({ message: "Invalid username or password" });
+      return res.status(400).json({ error: "Invalid username or password" });
     }
 
     generateTokenAndSetCookie(user._id, res);

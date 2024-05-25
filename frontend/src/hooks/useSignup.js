@@ -3,6 +3,7 @@ import { toast } from "react-hot-toast";
 import { useAuthContext } from "../context/AuthContext";
 const useSignup = () => {
   const [loading, setLoading] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const { authUser, setAuthUser } = useAuthContext();
 
   const signup = async ({
