@@ -4,10 +4,8 @@ const useConversation = create((set) => ({
   // Initializing the 'selectedConversation' state variable with a value of null
   selectedConversation: null,
   // Defining a function called 'setSelectedConversation' that takes a parameter 'selectedConversation'
-  setSelectedConversation: (
-    // Updating the 'selectedConversation' state variable with the provided value
-    selectedConversation
-  ) => set({ selectedConversation }),
+  setSelectedConversation: (selectedConversation) =>
+    set({ selectedConversation }),
 
   // Initializing the 'messages' state variable as an empty array
   messages: [],
