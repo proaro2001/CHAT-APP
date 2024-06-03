@@ -13,7 +13,7 @@ const Messages = () => {
     if (!loading && lastMessageRef.current) {
       lastMessageRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [loading]);
+  }, [loading, messages]);
   return (
     <div className="px-4 flex-1 overflow-auto">
       {!loading &&
